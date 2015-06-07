@@ -8,19 +8,51 @@ with [ES7 async/await](https://github.com/lukehoban/ecmascript-asyncawait).
 `node-promise-es6` is available as an
 [npm package](https://www.npmjs.com/package/node-promise-es6).
 
-## Bundled Libraries
+## Usage
 
-### fs
+### Wrapped APIs
+
+#### fs
 ```js
 import fs from 'node-promise-es6/fs';
 
 async function run() {
-  return await fs.readdir('.');
+  console.log(await fs.readdir('.'));
 }
 ```
 
 Provides [fs-promise](https://www.npmjs.com/package/fs-promise) with
 [fs-extra](https://www.npmjs.com/package/fs-extra).
+
+#### child_process
+```js
+import {exec, execFile} from 'node-promise-es6/child-process';
+
+async function run() {
+  const {stdout, stderr} = await exec('ls .');
+  console.log(stdout, stderr);
+}
+```
+
+### Utilities
+
+#### promisify
+```js
+import promisify from 'node-promise-es6/promisify';
+
+function callbackFn(x, y, callback) {
+  callback(null, x, y);
+}
+
+async function run() {
+  const promiseFn = promisify(callbackFn, ['x', 'y']);
+  const {x, y} = await promiseFn(1, 2);
+  console.log(x === 1 && y === 2);
+}
+```
+
+A helper for wrapping Node.js-style callback-taking functions (error object as
+first argument) in a Promise API.
 
 ## Development
 ### Getting Started
