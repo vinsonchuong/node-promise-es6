@@ -1,6 +1,6 @@
 import path from 'path';
-import fs from 'node-promise-es6/src/fs';
-import {exec, execFile} from 'node-promise-es6/src/child-process';
+import fs from 'node-promise-es6/fs';
+import {exec, execFile} from 'node-promise-es6/child-process';
 import install from 'jasmine-es6';
 install();
 

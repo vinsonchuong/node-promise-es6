@@ -1,4 +1,4 @@
-import promisify from 'node-promise-es6/src/promisify';
+import promisify from 'node-promise-es6/promisify';
 import {default as install, catchError} from 'jasmine-es6';
 install();
 
