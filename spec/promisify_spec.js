@@ -1,6 +1,5 @@
 import promisify from 'node-promise-es6/promisify';
-import {default as install, catchError} from 'jasmine-es6';
-install();
+import {catchError} from 'jasmine-es6';
 
 describe('promisify', function() {
   it('wraps a (error, result)-callback-based function with a Promise', async function() {
