@@ -2,12 +2,19 @@
   "name": "node-promise-es6",
   "version": "0.0.3",
   "description": "An ES6 promise adapter for the Node.js API for use with ES7 async/await",
-  "keywords": ["es6", "promise"],
+  "keywords": [
+    "es6",
+    "promise"
+  ],
   "homepage": "https://github.com/vinsonchuong/node-promise-es6",
   "bugs": "https://github.com/vinsonchuong/node-promise-es6/issues",
   "license": "MIT",
   "author": "Vinson Chuong <vinsonchuong@gmail.com>",
-  "files": ["LICENSE", "README.md", "src"],
+  "files": [
+    "LICENSE",
+    "README.md",
+    "src"
+  ],
   "main": "src/index.js",
   "repository": {
     "type": "git",
