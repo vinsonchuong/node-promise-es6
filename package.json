@@ -1,6 +1,6 @@
 {
   "name": "node-promise-es6",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "An ES6 promise adapter for the Node.js API for use with ES7 async/await",
   "keywords": [
     "es6",
@@ -30,8 +30,8 @@
     "child-process-promise": "^1.1.0"
   },
   "devDependencies": {
-    "dist-es6": "^0.0.14",
-    "jasmine-es6": "^0.0.14",
-    "eslint-defaults": "^0.0.9"
+    "dist-es6": "^0.0.16",
+    "jasmine-es6": "^0.0.16",
+    "eslint-defaults": "^0.0.10"
   }
 }
