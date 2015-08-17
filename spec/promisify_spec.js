@@ -1,8 +1,8 @@
 import promisify from 'node-promise-es6/promisify';
 import {catchError} from 'jasmine-es6';
 
-describe('promisify', function() {
-  it('wraps a (error, result)-callback-based function with a Promise', async function() {
+describe('promisify', () => {
+  it('wraps a (error, result)-callback-based function with a Promise', async () => {
     function successFn(callback) {
       callback(null, 'success');
     }
@@ -16,7 +16,7 @@ describe('promisify', function() {
     expect(await catchError(promisifiedFailFn())).toBe('fail');
   });
 
-  it('wraps with native Promises', function() {
+  it('wraps with native Promises', () => {
     function fn(callback) {
       callback(null, 'success');
     }
@@ -24,7 +24,7 @@ describe('promisify', function() {
     expect(promisifiedfn() instanceof Promise).toBe(true);
   });
 
-  it('passes arguments through to the wrapped function', async function() {
+  it('passes arguments through to the wrapped function', async () => {
     function fn(arg1, arg2, callback) {
       expect(arg1).toBe('foo');
       expect(arg2).toBe('bar');
@@ -34,7 +34,7 @@ describe('promisify', function() {
     expect(await promisifiedFn('foo', 'bar')).toBe('success');
   });
 
-  it('resolves the promise with an array of values if the callback is called with multiple values', async function() {
+  it('resolves the promise with an array of values if the callback is called with multiple values', async () => {
     function fn(callback) {
       callback(null, 'value1', 'value2');
     }
@@ -42,7 +42,7 @@ describe('promisify', function() {
     expect(await promisifiedFn()).toEqual(['value1', 'value2']);
   });
 
-  it('converts the array of values into an object if given an array of key names', async function() {
+  it('converts the array of values into an object if given an array of key names', async () => {
     function fn(callback) {
       callback(null, 'value1', 'value2');
     }
