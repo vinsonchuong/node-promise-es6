@@ -1,1 +1,1 @@
-export * from 'fs-promise';
+export default require('fs-promise');
