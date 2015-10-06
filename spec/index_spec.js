@@ -12,11 +12,6 @@ describe('node-promise-es6', () => {
       expect(dirContents.sort())
         .toEqual(jasmine.arrayContaining(['index.js', 'fs.js']));
     });
-
-    it('includes fs-extra', async () => {
-      expect(await fs.readJson(path.resolve(__dirname, '../package.json')))
-        .toEqual(jasmine.objectContaining({name: 'node-promise-es6'}));
-    });
   });
 
   describe('child_process', () => {

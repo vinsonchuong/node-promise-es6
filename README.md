@@ -21,8 +21,7 @@ async function run() {
 }
 ```
 
-Provides [fs-promise](https://www.npmjs.com/package/fs-promise) with
-[fs-extra](https://www.npmjs.com/package/fs-extra).
+Provides [fs-promise](https://www.npmjs.com/package/fs-promise).
 
 #### child_process
 ```js
