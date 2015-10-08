@@ -24,9 +24,7 @@
     "prepublish": "dist-es6",
     "test": "eslint && jasmine"
   },
-  "dependencies": {
-    "fs-promise": "^0.3.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "dist-es6": "^0.0.18",
     "jasmine-es6": "^0.0.18",

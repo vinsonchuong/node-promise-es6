@@ -21,8 +21,6 @@ async function run() {
 }
 ```
 
-Provides [fs-promise](https://www.npmjs.com/package/fs-promise).
-
 #### child_process
 ```js
 import {exec, execFile} from 'node-promise-es6/child-process';

@@ -1,1 +1,41 @@
-export default require('fs-promise');
+import fs from 'fs';
+import promisify from 'node-promise-es6/promisify';
+
+export default {
+  rename: promisify(fs.rename),
+  ftruncate: promisify(fs.ftruncate),
+  truncate: promisify(fs.truncate),
+  chown: promisify(fs.chown),
+  fchown: promisify(fs.fchown),
+  lchown: promisify(fs.lchown),
+  chmod: promisify(fs.chmod),
+  fchmod: promisify(fs.fchmod),
+  lchmod: promisify(fs.lchmod),
+  stat: promisify(fs.stat),
+  lstat: promisify(fs.lstat),
+  fstat: promisify(fs.fstat),
+  link: promisify(fs.link),
+  symlink: promisify(fs.symlink),
+  readlink: promisify(fs.readlink),
+  realpath: promisify(fs.realpath),
+  unlink: promisify(fs.unlink),
+  rmdir: promisify(fs.rmdir),
+  mkdir: promisify(fs.mkdir),
+  readdir: promisify(fs.readdir),
+  close: promisify(fs.close),
+  open: promisify(fs.open),
+  utimes: promisify(fs.utimes),
+  futimes: promisify(fs.futimes),
+  fsync: promisify(fs.fsync),
+  readFile: promisify(fs.readFile),
+  writeFile: promisify(fs.writeFile),
+  appendFile: promisify(fs.appendFile),
+  access: promisify(fs.access),
+  write: promisify(fs.write, ['written', 'data']),
+  read: promisify(fs.read, ['bytesRead', 'buffer']),
+  watchFile: fs.watchFile,
+  unwatchFile: fs.unwatchFile,
+  watch: fs.watch,
+  createReadStream: fs.createReadStream,
+  createWriteStream: fs.createWriteStream
+};
