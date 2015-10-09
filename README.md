@@ -14,7 +14,7 @@ with [ES7 async/await](https://github.com/lukehoban/ecmascript-asyncawait).
 
 #### fs
 ```js
-import fs from 'node-promise-es6/fs';
+import {fs} from 'node-promise-es6';
 
 async function run() {
   console.log(await fs.readdir('.'));
@@ -23,10 +23,10 @@ async function run() {
 
 #### child_process
 ```js
-import {exec, execFile} from 'node-promise-es6/child-process';
+import {childProcess} from 'node-promise-es6';
 
 async function run() {
-  const {stdout, stderr} = await exec('ls .');
+  const {stdout, stderr} = await childProcess.exec('ls .');
   console.log(stdout, stderr);
 }
 ```

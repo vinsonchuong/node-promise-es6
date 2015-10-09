@@ -1,41 +1,39 @@
 import fs from 'fs';
 import promisify from 'node-promise-es6/promisify';
 
-export default {
-  rename: promisify(fs.rename),
-  ftruncate: promisify(fs.ftruncate),
-  truncate: promisify(fs.truncate),
-  chown: promisify(fs.chown),
-  fchown: promisify(fs.fchown),
-  lchown: promisify(fs.lchown),
-  chmod: promisify(fs.chmod),
-  fchmod: promisify(fs.fchmod),
-  lchmod: promisify(fs.lchmod),
-  stat: promisify(fs.stat),
-  lstat: promisify(fs.lstat),
-  fstat: promisify(fs.fstat),
-  link: promisify(fs.link),
-  symlink: promisify(fs.symlink),
-  readlink: promisify(fs.readlink),
-  realpath: promisify(fs.realpath),
-  unlink: promisify(fs.unlink),
-  rmdir: promisify(fs.rmdir),
-  mkdir: promisify(fs.mkdir),
-  readdir: promisify(fs.readdir),
-  close: promisify(fs.close),
-  open: promisify(fs.open),
-  utimes: promisify(fs.utimes),
-  futimes: promisify(fs.futimes),
-  fsync: promisify(fs.fsync),
-  readFile: promisify(fs.readFile),
-  writeFile: promisify(fs.writeFile),
-  appendFile: promisify(fs.appendFile),
-  access: promisify(fs.access),
-  write: promisify(fs.write, ['written', 'data']),
-  read: promisify(fs.read, ['bytesRead', 'buffer']),
-  watchFile: fs.watchFile,
-  unwatchFile: fs.unwatchFile,
-  watch: fs.watch,
-  createReadStream: fs.createReadStream,
-  createWriteStream: fs.createWriteStream
-};
+export const rename = promisify(fs.rename);
+export const ftruncate = promisify(fs.ftruncate);
+export const truncate = promisify(fs.truncate);
+export const chown = promisify(fs.chown);
+export const fchown = promisify(fs.fchown);
+export const lchown = promisify(fs.lchown);
+export const chmod = promisify(fs.chmod);
+export const fchmod = promisify(fs.fchmod);
+export const lchmod = promisify(fs.lchmod);
+export const stat = promisify(fs.stat);
+export const lstat = promisify(fs.lstat);
+export const fstat = promisify(fs.fstat);
+export const link = promisify(fs.link);
+export const symlink = promisify(fs.symlink);
+export const readlink = promisify(fs.readlink);
+export const realpath = promisify(fs.realpath);
+export const unlink = promisify(fs.unlink);
+export const rmdir = promisify(fs.rmdir);
+export const mkdir = promisify(fs.mkdir);
+export const readdir = promisify(fs.readdir);
+export const close = promisify(fs.close);
+export const open = promisify(fs.open);
+export const utimes = promisify(fs.utimes);
+export const futimes = promisify(fs.futimes);
+export const fsync = promisify(fs.fsync);
+export const readFile = promisify(fs.readFile);
+export const writeFile = promisify(fs.writeFile);
+export const appendFile = promisify(fs.appendFile);
+export const access = promisify(fs.access);
+export const write = promisify(fs.write, ['written', 'data']);
+export const read = promisify(fs.read, ['bytesRead', 'buffer']);
+export const watchFile = fs.watchFile;
+export const unwatchFile = fs.unwatchFile;
+export const watch = fs.watch;
+export const createReadStream = fs.createReadStream;
+export const createWriteStream = fs.createWriteStream;

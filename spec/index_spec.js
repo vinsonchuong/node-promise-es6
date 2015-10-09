@@ -1,6 +1,5 @@
 import path from 'path';
-import fs from 'node-promise-es6/fs';
-import {exec, execFile} from 'node-promise-es6/child-process';
+import {fs, childProcess} from 'node-promise-es6';
 
 describe('node-promise-es6', () => {
   describe('fs', () => {
@@ -16,13 +15,13 @@ describe('node-promise-es6', () => {
 
   describe('child_process', () => {
     it('wraps child_process.exec with a native promise', async () => {
-      const {stdout} = await exec(`ls '${path.resolve(__dirname, '../')}'`);
+      const {stdout} = await childProcess.exec(`ls '${path.resolve(__dirname, '../')}'`);
       expect(stdout.trim().split('\n'))
         .toEqual(jasmine.arrayContaining(['package.json', 'README.md']));
     });
 
     it('wraps child_process.execFile with a native promise', async () => {
-      const {stdout} = await execFile('ls', [path.resolve(__dirname, '../')]);
+      const {stdout} = await childProcess.execFile('ls', [path.resolve(__dirname, '../')]);
       expect(stdout.trim().split('\n'))
         .toEqual(jasmine.arrayContaining(['package.json', 'README.md']));
     });
