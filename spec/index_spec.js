@@ -11,6 +11,12 @@ describe('node-promise-es6', () => {
       expect(dirContents.sort())
         .toEqual(jasmine.arrayContaining(['index.js', 'fs.js']));
     });
+
+    it('re-exports the non-async fs functions', () => {
+      expect(fs.watch).toBeDefined();
+      expect(fs.createReadStream).toBeDefined();
+      expect(fs.renameSync).toBeDefined();
+    });
   });
 
   describe('child_process', () => {

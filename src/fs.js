@@ -1,6 +1,8 @@
 import fs from 'fs';
 import promisify from 'node-promise-es6/promisify';
 
+export * from 'fs';
+
 export const rename = promisify(fs.rename);
 export const ftruncate = promisify(fs.ftruncate);
 export const truncate = promisify(fs.truncate);
@@ -32,8 +34,3 @@ export const appendFile = promisify(fs.appendFile);
 export const access = promisify(fs.access);
 export const write = promisify(fs.write, ['written', 'data']);
 export const read = promisify(fs.read, ['bytesRead', 'buffer']);
-export const watchFile = fs.watchFile;
-export const unwatchFile = fs.unwatchFile;
-export const watch = fs.watch;
-export const createReadStream = fs.createReadStream;
-export const createWriteStream = fs.createWriteStream;
