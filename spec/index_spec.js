@@ -15,7 +15,9 @@ describe('node-promise-es6', () => {
     it('re-exports the non-async fs functions', () => {
       expect(fs.watch).toBeDefined();
       expect(fs.createReadStream).toBeDefined();
+      /* eslint-disable */
       expect(fs.renameSync).toBeDefined();
+      /* eslint-enable */
     });
   });
 
