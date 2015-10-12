@@ -1,4 +1,4 @@
-import promisify from 'node-promise-es6/promisify';
+import {promisify} from 'node-promise-es6';
 import {catchError} from 'jasmine-es6';
 
 describe('promisify', () => {

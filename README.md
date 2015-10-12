@@ -35,7 +35,7 @@ async function run() {
 
 #### promisify
 ```js
-import promisify from 'node-promise-es6/promisify';
+import {promisify} from 'node-promise-es6';
 
 function callbackFn(x, y, callback) {
   callback(null, x, y);
