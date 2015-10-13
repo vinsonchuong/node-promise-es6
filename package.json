@@ -21,12 +21,12 @@
     "url": "https://github.com/vinsonchuong/node-promise-es6"
   },
   "scripts": {
-    "prepublish": "dist-es6",
+    "prepublish": "babel-node --stage 0 node_modules/.bin/dist-es6",
     "test": "eslint && jasmine"
   },
   "dependencies": {},
   "devDependencies": {
-    "dist-es6": "^0.0.18",
+    "dist-es6": "^0.0.19",
     "jasmine-es6": "^0.0.18",
     "eslint-defaults": "^0.1.4"
   }
