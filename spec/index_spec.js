@@ -33,5 +33,15 @@ describe('node-promise-es6', () => {
       expect(stdout.trim().split('\n'))
         .toEqual(jasmine.arrayContaining(['package.json', 'README.md']));
     });
+
+    it('re-exports the non-async child_process functions', () => {
+      expect(childProcess.spawn).toBeDefined();
+      expect(childProcess.fork).toBeDefined();
+      /* eslint-disable */
+      expect(childProcess.spawnSync).toBeDefined();
+      expect(childProcess.execSync).toBeDefined();
+      expect(childProcess.execFileSync).toBeDefined();
+      /* eslint-enable */
+    });
   });
 });
