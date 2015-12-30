@@ -21,7 +21,7 @@
     "url": "https://github.com/vinsonchuong/node-promise-es6"
   },
   "scripts": {
-    "prepublish": "dist-es6",
+    "prepublish": "./node_modules/babel-cli/bin/babel-node.js --presets es2015,stage-0 --plugins transform-runtime ./node_modules/.bin/dist-es6",
     "test": "eslint && jasmine"
   },
   "dependencies": {},
