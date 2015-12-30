@@ -1,7 +1,52 @@
 import fs from 'fs';
 import promisify from 'node-promise-es6/promisify';
 
-export * from 'fs';
+// export * from 'fs';
+/* eslint-disable */
+export const Stats = fs.Stats;
+export const F_OK = fs.F_OK;
+export const R_OK = fs.R_OK;
+export const W_OK = fs.W_OK;
+export const X_OK = fs.X_OK;
+export const accessSync = fs.accessSync;
+export const readFileSync = fs.readFileSync;
+export const closeSync = fs.closeSync;
+export const openSync = fs.openSync;
+export const readSync = fs.readSync;
+export const writeSync = fs.writeSync;
+export const renameSync = fs.renameSync;
+export const truncateSync = fs.truncateSync;
+export const ftruncateSync = fs.ftruncateSync;
+export const rmdirSync = fs.rmdirSync;
+export const fsyncSync = fs.fsyncSync;
+export const mkdirSync = fs.mkdirSync;
+export const readdirSync = fs.readdirSync;
+export const fstatSync = fs.fstatSync;
+export const lstatSync = fs.lstatSync;
+export const statSync = fs.statSync;
+export const readlinkSync = fs.readlinkSync;
+export const symlinkSync = fs.symlinkSync;
+export const linkSync = fs.linkSync;
+export const unlinkSync = fs.unlinkSync;
+export const fchmodSync = fs.fchmodSync;
+export const chmodSync = fs.chmodSync;
+export const fchownSync = fs.fchownSync;
+export const chownSync = fs.chownSync;
+export const utimesSync = fs.utimesSync;
+export const futimesSync = fs.futimesSync;
+export const writeFileSync = fs.writeFileSync;
+export const appendFileSync = fs.appendFileSync;
+export const watch = fs.watch;
+export const watchFile = fs.watchFile;
+export const unwatchFile = fs.unwatchFile;
+export const realpathSync = fs.realpathSync;
+export const createReadStream = fs.createReadStream;
+export const ReadStream = fs.ReadStream;
+export const FileReadStream = fs.FileReadStream;
+export const createWriteStream = fs.createWriteStream;
+export const WriteStream = fs.WriteStream;
+export const FileWriteStream = fs.FileWriteStream;
+/* eslint-enable */
 
 export const rename = promisify(fs.rename);
 export const ftruncate = promisify(fs.ftruncate);
