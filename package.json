@@ -1,6 +1,6 @@
 {
   "name": "node-promise-es6",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "An ES6 promise adapter for the Node.js API for use with ES7 async/await",
   "keywords": [
     "es6",
