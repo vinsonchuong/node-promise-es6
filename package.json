@@ -21,7 +21,7 @@
     "url": "https://github.com/vinsonchuong/node-promise-es6"
   },
   "scripts": {
-    "prepublish": "dist-es6",
+    "prepublish": "dist-es6-bootstrap",
     "test": "eslint && jasmine"
   },
   "dependencies": {},
