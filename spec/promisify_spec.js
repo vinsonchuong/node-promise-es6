@@ -49,4 +49,19 @@ describe('promisify', () => {
     const promisifiedFn = promisify(fn, ['key1', 'key2']);
     expect(await promisifiedFn()).toEqual({key1: 'value1', key2: 'value2'});
   });
+
+  it('extends the error object if given an array of key names', async () => {
+    function fn(callback) {
+      callback({message: 'This is an error.'}, 'value1', 'value2');
+    }
+    const promisifiedFn = promisify(fn, ['key1', 'key2']);
+
+    try {
+      await promisifiedFn();
+    } catch ({message, key1, key2}) {
+      expect(message).toBe('This is an error.');
+      expect(key1).toBe('value1');
+      expect(key2).toBe('value2');
+    }
+  });
 });
